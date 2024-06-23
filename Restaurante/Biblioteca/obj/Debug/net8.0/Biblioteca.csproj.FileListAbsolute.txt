@@ -9,3 +9,15 @@ C:\Users\USER\Desktop\Restaurante\Biblioteca\obj\Debug\net8.0\Biblioteca.dll
 C:\Users\USER\Desktop\Restaurante\Biblioteca\obj\Debug\net8.0\refint\Biblioteca.dll
 C:\Users\USER\Desktop\Restaurante\Biblioteca\obj\Debug\net8.0\Biblioteca.pdb
 C:\Users\USER\Desktop\Restaurante\Biblioteca\obj\Debug\net8.0\ref\Biblioteca.dll
+C:\Users\USER\Desktop\tp.restaurante.Falasca\Restaurante\Biblioteca\bin\Debug\net8.0\Biblioteca.deps.json
+C:\Users\USER\Desktop\tp.restaurante.Falasca\Restaurante\Biblioteca\bin\Debug\net8.0\Biblioteca.dll
+C:\Users\USER\Desktop\tp.restaurante.Falasca\Restaurante\Biblioteca\bin\Debug\net8.0\Biblioteca.pdb
+C:\Users\USER\Desktop\tp.restaurante.Falasca\Restaurante\Biblioteca\obj\Debug\net8.0\Biblioteca.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\tp.restaurante.Falasca\Restaurante\Biblioteca\obj\Debug\net8.0\Biblioteca.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\tp.restaurante.Falasca\Restaurante\Biblioteca\obj\Debug\net8.0\Biblioteca.AssemblyInfo.cs
+C:\Users\USER\Desktop\tp.restaurante.Falasca\Restaurante\Biblioteca\obj\Debug\net8.0\Biblioteca.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\tp.restaurante.Falasca\Restaurante\Biblioteca\obj\Debug\net8.0\Biblioteca.sourcelink.json
+C:\Users\USER\Desktop\tp.restaurante.Falasca\Restaurante\Biblioteca\obj\Debug\net8.0\Biblioteca.dll
+C:\Users\USER\Desktop\tp.restaurante.Falasca\Restaurante\Biblioteca\obj\Debug\net8.0\refint\Biblioteca.dll
+C:\Users\USER\Desktop\tp.restaurante.Falasca\Restaurante\Biblioteca\obj\Debug\net8.0\Biblioteca.pdb
+C:\Users\USER\Desktop\tp.restaurante.Falasca\Restaurante\Biblioteca\obj\Debug\net8.0\ref\Biblioteca.dll

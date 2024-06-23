@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\Desktop\\Restaurante\\Biblioteca\\Biblioteca.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Desktop\\tp.restaurante.Falasca\\Restaurante\\Biblioteca\\Biblioteca.csproj",
       "projectName": "Biblioteca",
-      "projectPath": "C:\\Users\\USER\\Desktop\\Restaurante\\Biblioteca\\Biblioteca.csproj",
+      "projectPath": "C:\\Users\\USER\\Desktop\\tp.restaurante.Falasca\\Restaurante\\Biblioteca\\Biblioteca.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\Desktop\\Restaurante\\Biblioteca\\obj\\",
+      "outputPath": "C:\\Users\\USER\\Desktop\\tp.restaurante.Falasca\\Restaurante\\Biblioteca\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
