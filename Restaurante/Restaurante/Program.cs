@@ -36,7 +36,7 @@ namespace Vista
             List<Producto> productos = [producto1, producto2, producto3, producto4, bebida1, bebida2];
             
             
-            List<Producto> productosPlato = [producto1, producto2];
+            //List<Producto> productosPlato = [producto1, producto2];
             
             Plato plato1 = new Plato("Milanesa con puré", [producto1, producto2], "20 minutos", 4000);
             Plato plato2 = new Plato("Ravioles con salsa", [producto3, producto4], "25 minutos", 5000);
@@ -77,7 +77,7 @@ namespace Vista
             //List<Pedido> pedidos = new List<Pedido>();
 
 
-            //Rest
+            //Restaurante
             Restaurante restaurante = new Restaurante(empleados, proveedores, productos, mesaClientes, deliveryClientes, menu, 5000000);
 
            
