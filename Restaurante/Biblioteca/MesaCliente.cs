@@ -34,6 +34,7 @@ namespace Biblioteca
         public void IncorporarPedidoAlaCuenta(IConsumible pedido)
         {
             listaDeConsumido.Add(pedido);
+            Restaurante.AgregarDineroDeCaja(pedido.Precio);
 
         }
 

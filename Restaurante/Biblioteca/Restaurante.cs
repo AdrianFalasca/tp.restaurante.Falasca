@@ -533,7 +533,7 @@ namespace Biblioteca
                     foreach (DeliveryCliente deliveryCliente in deliveryCliente)
                     {
                         deliveryCliente.Cerrada = false;
-
+                        
                         //deliveryCliente.Pedidos = [];
                     }
                 }
