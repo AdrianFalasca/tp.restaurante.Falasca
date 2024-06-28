@@ -12,10 +12,11 @@ namespace Biblioteca
         {
         }
 
-        public IConsumible CrearPlato(string nombre, List<Producto> productos, string tiempoPreparacion)
+        public void CrearPlato(string nombre, List<Producto> productos, string tiempoPreparacion, Menu menu)
         {
             Plato plato = new Plato(nombre, productos,  tiempoPreparacion, 0);
-            return plato;
+            menu.IncorporarAlMenu(plato);
+            
         }
 
         public void ModificarPlato(string nombreAModificar, string  nombreActual, List<Producto> productos, string tiempoPreparacion,  Menu menu)
@@ -31,6 +32,7 @@ namespace Biblioteca
                     plato.Productos = productos;
                     plato.Nombre = nombreAModificar;
                     
+
                 }
             }
 
@@ -40,28 +42,42 @@ namespace Biblioteca
             
             for (int i = 0; i < menu.Consumible.Count; i++)
             {
+                
                 if (menu.Consumible[i].Nombre == nombre)
                 {
+                    
                     menu.Consumible.RemoveAt(i);
+                   
                 }
             }
         }
 
-        
-        public bool CocinarPlato()
-        {
-            return true;
-        }
 
-        /*public IConsumible CocinarPlato(string nombre, List<Producto> productos, Menu menu)//ver
+        public bool CocinarPlato(List<Producto> productosStock, IConsumible pedido)
         {
-            for (int i = 0; i < menu.Consumible.Count; i++)
+            
+
+            if (pedido is Plato plato)
             {
-                if (menu.Consumible[i].Nombre == nombre)
-                {
-                    return menu.Consumible[i];
+                foreach (Producto productoPlato in plato.Productos) 
+                { 
+                    foreach(Producto productoStock in productosStock)
+                        if(productoPlato.Nombre == productoStock.Nombre && productoStock.Cantidad < 2)
+                        {
+                            return true;
+                        }
                 }
             }
-        }*/
+            if(pedido is Bebida bebida)
+            {
+                foreach (Producto productoStock in productosStock)
+                    if (bebida.Nombre == productoStock.Nombre && productoStock.Cantidad < 1)
+                    {
+                        return true;
+                    }
+            }
+            return false;
+           
+        }
     }
 }

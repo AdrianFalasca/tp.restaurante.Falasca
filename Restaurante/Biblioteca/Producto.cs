@@ -12,12 +12,15 @@ namespace Biblioteca
         private int cantidad;
         private decimal precio;
 
-        
-
-        public Producto(string nombre, int cantidad, decimal precio) 
+        public Producto(string nombre,  decimal precio) 
         {
             Nombre = nombre;
             Precio = precio;
+            
+        }
+
+        public Producto(string nombre, int cantidad, decimal precio) : this(nombre, precio)
+        {
             Cantidad = cantidad;
         }
 

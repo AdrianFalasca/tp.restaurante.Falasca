@@ -9,15 +9,46 @@ namespace Biblioteca
     public class DeliveryCliente
     {
 
-        private string nui;
-        
+        private string direccion;
+        private List<IConsumible> listaDeConsumido;
+        private bool cerrada;
+        private string medioPago;
 
-        public DeliveryCliente(string nui)
+        public DeliveryCliente(string direccion, List<IConsumible> consumido, bool cerrada, string medioPago)
         {
-            Nui = nui;
-           
+            this.Direccion = direccion;
+            this.Pedidos = consumido;
+            this.Cerrada = cerrada;
+            this.MedioPago = medioPago;
         }
 
-        public string Nui { get => nui; set => nui = value; }
+        public string Direccion { get => direccion; set => direccion = value; }
+        public List<IConsumible> Pedidos { get => listaDeConsumido; set => listaDeConsumido = value; }
+        public bool Cerrada { get => cerrada; set => cerrada = value; }
+        public string MedioPago { get => medioPago; set => medioPago = value; }
+
+        public void IncorporarPedidoAlaCuenta(IConsumible pedido)
+        {
+            listaDeConsumido.Add(pedido);
+            
+        }
+
+        public IConsumible ElegirConsumible(Menu menu)
+        {
+
+            
+            Random random = new Random();
+            int index = random.Next(0, menu.Consumible.Count);
+            return menu.Consumible[index];
+
+        }
     }
+
+
+
+   
+
+  
+
+    
 }

@@ -8,32 +8,26 @@ namespace Biblioteca
 {
     public class Mesero : Empleado
     {
-
-        public Mesero(string nombre, string apellido, string direccion, string contacto, decimal sueldo) : base(nombre, apellido, direccion, contacto, sueldo)
+        private List<MesaCliente> mesaCliente;
+        public Mesero(string nombre, string apellido, string direccion, string contacto, decimal sueldo, List<MesaCliente> mesaCliente) : base(nombre, apellido, direccion, contacto, sueldo)
         {
+            this.MesaCliente = mesaCliente;
+        }
+        public List<MesaCliente> MesaCliente { get => mesaCliente; set => mesaCliente = value; }
+
+        public IConsumible TomarPedidoMesero(Menu menu)
+        {
+           return MesaCliente[0].ElegirConsumible(menu);
         }
 
-        public void TomarPedido()
-        {
-           
-        }
-
-        public void AgregarPedidoALaMesa()
-        {
-            //for (int i = 0; i < mesa.Count; i++)
-            //{
-            //    if (mesa.Precio)
-            //    {
-            //        
-            //    }
-            //}
-
-            //mesa.IncorporarPedidoAlaMesa(pedido);
-        }
-        public void DescontarProductos()
+        public void AgregarALaMesa(IConsumible pedido)
         {
 
+            MesaCliente[0].IncorporarPedidoAlaCuenta(pedido);
+            
         }
         
+
+       
     }
 }

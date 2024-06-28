@@ -10,11 +10,8 @@ namespace Biblioteca
     {
 
         private string nombre;
-        
         private decimal precio;
-
         private List<Producto> productos;
-        //private string cantidadIngredientes;
         private string tiempoPreparacion;
         
 

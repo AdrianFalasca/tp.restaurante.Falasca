@@ -15,8 +15,9 @@ namespace Biblioteca
         private string cuit;
         private string direccion;
         private string diaDeEntrega;
+        private decimal pago;
 
-        public Proveedor(List<Producto> productos, string tipoProducto, string medioDePago, string nombre, string cuit, string direccion, string diaDeEntrega)
+        public Proveedor(List<Producto> productos, string tipoProducto, string medioDePago, string nombre, string cuit, string direccion, string diaDeEntrega, decimal pago)
         {
             this.Productos = productos;
             this.TipoProducto = tipoProducto;
@@ -25,6 +26,7 @@ namespace Biblioteca
             this.Cuit = cuit;
             this.Direccion = direccion;
             this.DiaDeEntrega = diaDeEntrega;
+            this.pago = pago;
         }
 
         public List<Producto> Productos { get => productos; set => productos = value; }
@@ -34,5 +36,7 @@ namespace Biblioteca
         public string Cuit { get => cuit; set => cuit = value; }
         public string Direccion { get => direccion; set => direccion = value; }
         public string DiaDeEntrega { get => diaDeEntrega; set => diaDeEntrega = value; }
+
+        public decimal Pago { get => pago; set => pago = value; }
     }
 }

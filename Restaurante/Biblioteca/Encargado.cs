@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Biblioteca
 {
@@ -12,11 +13,7 @@ namespace Biblioteca
         {
         }
 
-        public IConsumible PonerPrecioPlato(decimal precio, IConsumible plato)
-        {
-            plato.Precio = precio;
-            return plato;
-        }
+        
 
         public void PonerPrecioPlato(string nombre, decimal precio, Menu menu)
         {
@@ -32,28 +29,46 @@ namespace Biblioteca
             }
         }
 
-        public void CancelarPedido()
+        public bool CancelarPedido()
         {
-
+            return true;
         }
 
-        public void PedirProductosAProveedores(string nombreProducto, List<Proveedor> proveedores, List<Producto> productos)
+        public bool PedirProductosAProveedores(string tipoProducto, string nombreProducto, List<Proveedor> proveedores, List<Producto> productos)
         {
-            foreach(Proveedor proveedor in proveedores)//crear escenario donde un proveedor no tenga un producto
+            foreach(Proveedor proveedor in proveedores)
             {
-                if (proveedor.TipoProducto == nombreProducto)
+                if (proveedor.TipoProducto == tipoProducto)
                 {
-                    foreach (Producto producto in productos)
+                    for (int i = 0; i < proveedor.Productos.Count; i++)
                     {
-                        if (producto.Nombre == nombreProducto)
+                        if(proveedor.Productos[i].Nombre == nombreProducto)
                         {
-                            producto.Cantidad += 1000;
-                            break;
+                            IngresarProductosPedidosAProveedores(nombreProducto, productos);
+                            proveedor.Pago += 10000;
+                            Restaurante.RetirarDineroDeCaja(20000);
                         }
-                            
+                      
                     }
                 }
             }
+            return false;
         }
+
+        private void IngresarProductosPedidosAProveedores(string nombreProducto, List<Producto> productos)
+        {
+            foreach (Producto producto in productos)
+            {
+                if (producto.Nombre == nombreProducto)
+                {
+                    producto.Cantidad += 1000; 
+
+                    break;
+                }
+
+            }
+        }
+
+
     }
 }
